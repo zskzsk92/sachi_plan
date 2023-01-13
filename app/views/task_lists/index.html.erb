@@ -1,3 +1,41 @@
 <%= render "shared/header" %>
- <h1> トップページ仮 </h1>
+  <div class ="main">
+    <div class="contents">
+
+      <div class ="upper-contents">
+        <%# メイン画像 %>
+        <div class = "upper-left-image">
+          <%= image_tag "main_image.png", class:"main-image" %>
+        </div>
+
+        <%# カウントダウンコンテンツ %>
+        <div class ="upper-right-contents">
+          <div class ="countdown-content">
+            天国に行くまで <br> 20820日 20:27:46
+          </div>
+        </div>
+      </div>
+
+      <div class ="lower-contents">
+       <% @task_lists.each do|task_list| %>
+        <div class ="task_area">
+          <div class ="task-area-heder">
+            <div class = "task-area-heder-title">
+              <%= "#{current_user.nickname}'s 幸Plan" %>
+            </div>
+            <div class = "task-area-heder-newplan">
+              
+            </div>
+          </div>
+          
+          <div class = "task-list">
+            <h3 class="list_title"><%= task_list.title %></h3>
+          </div>
+        </div>
+       <% end %>
+      </div>
+
+      
+    </div>
+  </div>
 <%= render "shared/footer" %>
