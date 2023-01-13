@@ -1,3 +1,6 @@
-main > .container {
+footer{
+  width: 100vw;
   padding: 60px 15px 0;
+  margin-top: auto;
+  text-align: center;
 }

@@ -1,0 +1,9 @@
+<%= render "shared/header" %>
+  <div class ="plan-create-form">
+    <%= form_with model: @task_list, local: true do |form| %>
+      <%= form.text_field :title, calss: "newplan-form" , placeholder: "Plan name" %>
+      <%= form.submit 'POST'%>
+    <% end %>
+  </div>
+
+<%= render "shared/footer" %>

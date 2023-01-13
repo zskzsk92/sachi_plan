@@ -1,0 +1,37 @@
+
+.upper-contents{
+  height: 500px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-image {
+  height: 400px;
+  width: auto;
+  margin: 20px;
+}
+
+.countdown-content{
+  height: 400px;
+  width: 600px;
+  margin: 20px;
+  padding: 40px;
+  border-radius: 25px;
+  font-size: 40px;
+  background-color:rgb(239, 236, 232);
+}
+
+.lower-contents{
+  height: 600px;
+  width: 1200px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  background-color: aliceblue;
+}
+
+.task-list{
+  height: auto;
+  width: 250px;
+  background-color: brown;
+}
