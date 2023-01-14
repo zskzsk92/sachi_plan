@@ -1,3 +1,52 @@
-.navbar {
-  margin-bottom: 20px;
+.top-page-header{
+ 
+  background-color: #FFF8EA;
 }
+
+.header-contents{
+  display: flex;
+}
+
+.sachiplan-icon{
+  width: 4vw;
+  margin-left: 30Px;
+}
+
+.kara{
+ width: 0 auto;
+}
+
+.user-nav{
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  list-style: none; 
+  text-decoration: none;
+}
+
+.new-plan{
+  margin-right: 10px;
+  color: #594545;
+}
+
+
+.user-nickname{
+  margin-right: 10px;
+  color: #594545;
+}
+
+.logout{
+  color: #594545;
+}
+
+.login{
+  margin-right: 10px;
+  color: #594545;
+}
+
+.sing-up{
+  color: #594545;
+}
+
