@@ -20,7 +20,7 @@
 -belongs_to :user
 -has_many :task_contents
 
-## task_contentsテーブル
+## cardテーブル
 
 | Column    | Type       | Options                       |
 | --------- | ---------- | ----------------------------- |
