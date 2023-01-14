@@ -83,6 +83,35 @@ display: flex;
 justify-content: space-between;
 }
 
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.task-list-nuv-item {
+  position: relative;
+}
+
+.task-list-nuv-item a {
+  display: block;
+  line-height: 60px;
+  text-align: center;
+  background: #ddd;
+}
+
+.task-list-nuv-item-child {
+  visibility: hidden;
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0px;
+}
+
+.task-list-nuv-item:hover .child {
+  visibility: visible;
+}
+
 
 .task-list{
   height: auto;

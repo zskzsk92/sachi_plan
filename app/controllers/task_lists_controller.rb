@@ -10,10 +10,30 @@ class TaskListsController < ApplicationController
   def create
     @task_list = TaskList.new(task_list_params)
     if @task_list.save
-      redirect_to :root
+      redirect_to root_path
     else
       render :new
     end
+  end
+
+  def edit
+    @task_list = TaskList.find(params[:id])
+  end
+
+  def update
+    task_list = TaskList.find(params[:id])
+    if task_list.update(task_list_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
+
+  def destroy
+    task_list = TaskList.find(params[:id])
+    task_list.destroy
+    redirect_to root_path
   end
 
   private
