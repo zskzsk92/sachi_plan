@@ -18,7 +18,7 @@
 
 ### Association
 -belongs_to :user
--has_many :task_contents
+-has_many :cards
 
 ## cardテーブル
 

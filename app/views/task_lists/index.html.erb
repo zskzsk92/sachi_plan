@@ -82,16 +82,29 @@
                   </ul>
                 </div> %>
 
-                <Ul class ="task-list-nuv-item">
+                <%# <Ul class ="task-list-nuv-item">
                   <li><%= link_to "▼","#" %>
-                    <ul class =task-list-nuv-child>
+                    <ul class =task-list-nuv-child> 
                       <li><%= link_to "編集",edit_task_list_path(task_list.id) , method: :get %></li>
                       <li><%= link_to "削除",task_list_path(task_list.id) , method: :delete %></li>
                     </ul>
-                  </li>
-                </ul>
+                  <%# </li>
+                </ul> %>
               </div>
-
+             <div class ="card">
+             <% task_list.cards.each do|card| %> 
+              <div class ="card-content">
+              
+                <%= card.content %> 
+                <%= card.memo%>
+                <%= image_tag card.image.variant(resize: '500x500'), class: 'card-image' if card.image.attached? %>
+              
+              </div>
+              <div class ="card-create">
+                <%= link_to "＋cardを追加" ,new_task_list_card_path(task_list) %>
+              </div>
+             <% end %>
+             </div> 
             </div>
           </div>
           <% end %>
