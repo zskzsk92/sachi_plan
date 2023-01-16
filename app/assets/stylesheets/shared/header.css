@@ -1,52 +1,32 @@
-.top-page-header{
- 
-  background-color: #FFF8EA;
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
 }
 
-.header-contents{
-  display: flex;
+.form-control-dark {
+  color: #fff;
+  background-color: var(--bs-dark);
+  border-color: var(--bs-gray);
+}
+.form-control-dark:focus {
+  color: #fff;
+  background-color: var(--bs-dark);
+  border-color: #fff;
+  box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
 }
 
-.sachiplan-icon{
-  width: 4vw;
-  margin-left: 30Px;
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
 }
 
-.kara{
- width: 0 auto;
+.text-small {
+  font-size: 85%;
 }
 
-.user-nav{
-  margin: 10px;
-  padding: 10px;
-  display: flex;
-  justify-content: end;
-  align-items: flex-end;
-  list-style: none; 
-  text-decoration: none;
+.dropdown-toggle {
+  outline: 0;
 }
-
-.new-plan{
-  margin-right: 10px;
-  color: #594545;
-}
-
-
-.user-nickname{
-  margin-right: 10px;
-  color: #594545;
-}
-
-.logout{
-  color: #594545;
-}
-
-.login{
-  margin-right: 10px;
-  color: #594545;
-}
-
-.sing-up{
-  color: #594545;
-}
-
