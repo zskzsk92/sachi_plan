@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :task_lists
+
+  validates :nickname ,presence: true
 end

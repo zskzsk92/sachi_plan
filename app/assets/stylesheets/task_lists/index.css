@@ -1,17 +1,21 @@
 
-.upper-contents{
+/* --------------------------------------------------
+自分作った初期の丈夫
+-------------------------------------------------- */
+
+/* .upper-contents{
   height: 500px; 
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.main-image {
+/* .main-image {
   height: 400px;
   width: auto;
   margin: 20px;
-}
-
+} */
+/* 
 .countdown-content{
   height: 400px;
   width: 600px;
@@ -20,18 +24,189 @@
   border-radius: 25px;
   font-size: 40px;
   background-color:rgb(239, 236, 232);
+} */
+
+/* --------------------------------------------------
+ upper-contents
+-------------------------------------------------- */
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
 }
 
-.lower-contents{
-  height: 600px;
-  width: 1200px;
-  margin: 0 auto 40px;
-  padding: 20px;
-  background-color: aliceblue;
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
 }
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+/* rtl:end:ignore */
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  /* rtl:remove */
+  letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+
+
+/* --------------------------------------------------
+ タスク管理機能
+-------------------------------------------------- */
+.lower-contents{
+  margin: 0 auto;
+  background-color: aliceblue;
+  min-height: 93vh;
+  padding-top: 30px;
+  overflow-x: scroll;
+  position:relative;
+}
+
+.task-area-heder-contents{
+  min-height: 15vh;
+}
+
+.task_area {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    align-items: baseline;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-wrap: wrap;
+    background-color: aquamarine;
+}
+
+    
+    /* .list {
+      position: relative;
+      background-color: #e2e4e6;
+      padding: 10px;
+      margin-left: 20px;
+      min-width: 250px;
+      &:last-child {
+        margin-right: 20px;
+      }
+      &_header {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &_title {
+          font-size: 20px;
+          margin: 0;
+        }
+      }
+    } */
+
+.task-list_header{
+display: flex;
+justify-content: space-between;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.task-list-nuv-item {
+  position: relative;
+}
+
+.task-list-nuv-item a {
+  display: block;
+  line-height: 60px;
+  text-align: center;
+  background: #ddd;
+}
+
+.task-list-nuv-item-child {
+  visibility: hidden;
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0px;
+}
+
+.task-list-nuv-item:hover .child {
+  visibility: visible;
+}
+
 
 .task-list{
   height: auto;
-  width: 250px;
-  background-color: brown;
+  width: calc(25% - 25px);
+  background-color: beige;
+  margin: 0 10px;
+  padding: 5px 10px;
 }
+
+  

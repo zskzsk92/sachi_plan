@@ -1,41 +1,99 @@
 <%= render "shared/header" %>
-  <div class ="main">
+  <%# <div class ="main">
     <div class="contents">
 
       <div class ="upper-contents">
         <%# メイン画像 %>
-        <div class = "upper-left-image">
+        <%# <div class = "upper-left-image">
           <%= image_tag "main_image.png", class:"main-image" %>
-        </div>
+       <%# </div> %>
 
         <%# カウントダウンコンテンツ %>
-        <div class ="upper-right-contents">
+        <%# <div class ="upper-right-contents">
           <div class ="countdown-content">
             天国に行くまで <br> 20820日 20:27:46
           </div>
         </div>
-      </div>
+      </div> %> 
+     
+      <%# <hr class="featurette-divider"> %>
 
-      <div class ="lower-contents">
-       <% @task_lists.each do|task_list| %>
-        <div class ="task_area">
-          <div class ="task-area-heder">
-            <div class = "task-area-heder-title">
-              <%= "#{current_user.nickname}'s 幸Plan" %>
-            </div>
-            <div class = "task-area-heder-newplan">
-              
-            </div>
+      <div class="container marketing">
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
           </div>
-          
-          <div class = "task-list">
-            <h3 class="list_title"><%= task_list.title %></h3>
+          <div class="col-md-5 order-md-1">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
           </div>
         </div>
-       <% end %>
+      </div>
+      
+      <hr class="featurette-divider">
+     
+
+
+
+      <div class ="lower-contents">
+        <header>
+          <div class ="task-area-heder-contents">
+            <div class = "task-area-heder-title">
+               <%# <%= "#{current_user.nickname}'s 幸Plan。" %>
+            </div>
+            <div class = "task-area-heder-menu">
+              <%# タスク作成ボタン %>
+            </div>
+          </div>
+        </header>
+
+        <div class ="task_area">
+          <% @task_lists.each do|task_list| %>    
+          <div class = "task-list">
+            <div class="task-list_header">
+              <h3 class="task-list_header-title"><%= task_list.title %></h3>
+              <div class="task-list-nuv">
+                <%# <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                    <li><a class="dropdown-item active" href="#">編集</a></li>
+                    <li><a class="dropdown-item" href="task_list_path",method: :delete>削除</a></li>
+                  </ul>
+                </div> %>
+
+                <%# <Ul class ="task-list-nuv-item">
+                  <li><%= link_to "▼","#" %>
+                    <ul class =task-list-nuv-child> 
+                      <li><%= link_to "編集",edit_task_list_path(task_list.id) , method: :get %></li>
+                      <li><%= link_to "削除",task_list_path(task_list.id) , method: :delete %></li>
+                    </ul>
+                  <%# </li>
+                </ul> %>
+              </div>
+             <div class ="card">
+             <% task_list.cards.each do|card| %> 
+              <div class ="card-content">
+              
+                <%= card.content %> 
+                <%= card.memo%>
+                <%= image_tag card.image.variant(resize: '500x500'), class: 'card-image' if card.image.attached? %>
+              
+              </div>
+              <div class ="card-create">
+                <%= link_to "＋cardを追加" ,new_task_list_card_path(task_list) %>
+              </div>
+             <% end %>
+             </div> 
+            </div>
+          </div>
+          <% end %>
+        </div> 
+
       </div>
 
       
-    </div>
-  </div>
+    <%# </div>
+  </div> %>
 <%= render "shared/footer" %>

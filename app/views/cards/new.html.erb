@@ -1,0 +1,20 @@
+<%= render "shared/header" %>
+  <div class ="card-create-form"> 
+    <%= form_with model: [@task_list , @card] ,local: true do |form| %>
+      <div class ="content-form">
+        <%= form.text_field :content, calss: "content-form" , placeholder: "何する？" %>
+      </div>
+      <div class ="memo-form">
+        <%= form.text_area :memo, calss: "memo-form" , placeholder: "memo" %>
+      </div>
+      <div class ="image-form">
+        <label class="form-image">
+          <span class="image-file">image</span>
+          <%= form.file_field :image, class: 'hidden' %>
+        </label>
+      </div>
+      <div class ="buttun">
+        <%= form.submit 'POST',class:"buttun"%>
+      </div> 
+    <% end %>
+  </div>
