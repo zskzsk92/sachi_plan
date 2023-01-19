@@ -20,7 +20,7 @@
 -belongs_to :user
 -has_many :cards
 
-## cardテーブル
+## cardsテーブル
 
 | Column    | Type       | Options                       |
 | --------- | ---------- | ----------------------------- |
