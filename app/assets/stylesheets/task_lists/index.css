@@ -1,6 +1,6 @@
 
 /* --------------------------------------------------
-自分作った初期の丈夫
+自分作った初期の上部
 -------------------------------------------------- */
 
 /* .upper-contents{
@@ -118,95 +118,11 @@
 /* --------------------------------------------------
  タスク管理機能
 -------------------------------------------------- */
-.lower-contents{
-  margin: 0 auto;
-  background-color: aliceblue;
-  min-height: 93vh;
-  padding-top: 30px;
-  overflow-x: scroll;
-  position:relative;
+.mt-5 {
+  margin-top: 5 !important;
 }
 
-.task-area-heder-contents{
-  min-height: 15vh;
+.icon-link{
+  text-decoration: none;
+  color: black;
 }
-
-.task_area {
-    height: 90%;
-    width: 90%;
-    display: flex;
-    align-items: baseline;
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    flex-wrap: wrap;
-    background-color: aquamarine;
-}
-
-    
-    /* .list {
-      position: relative;
-      background-color: #e2e4e6;
-      padding: 10px;
-      margin-left: 20px;
-      min-width: 250px;
-      &:last-child {
-        margin-right: 20px;
-      }
-      &_header {
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        &_title {
-          font-size: 20px;
-          margin: 0;
-        }
-      }
-    } */
-
-.task-list_header{
-display: flex;
-justify-content: space-between;
-}
-
-ul {
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-}
-
-.task-list-nuv-item {
-  position: relative;
-}
-
-.task-list-nuv-item a {
-  display: block;
-  line-height: 60px;
-  text-align: center;
-  background: #ddd;
-}
-
-.task-list-nuv-item-child {
-  visibility: hidden;
-  width: 100%;
-  position: absolute;
-  top: 60px;
-  left: 0px;
-}
-
-.task-list-nuv-item:hover .child {
-  visibility: visible;
-}
-
-
-.task-list{
-  height: auto;
-  width: calc(25% - 25px);
-  background-color: beige;
-  margin: 0 10px;
-  padding: 5px 10px;
-}
-
-  

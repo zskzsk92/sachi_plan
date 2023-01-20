@@ -1,9 +1,5 @@
 class CardsController < ApplicationController
 
-  def index
-    @cards = Card.all
-  end
-
   def new
     @card = Card.new
     @task_list = TaskList.find(params[:task_list_id])
@@ -17,6 +13,31 @@ class CardsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @card = Card.find(params[:id])
+  end
+
+  def edit
+    @task_list = TaskList.find(params[:task_list_id])
+    @card = Card.find(params[:id])
+  end
+
+  def update
+    @task_list = TaskList.find(params[:task_list_id])
+    @card = Card.find(params[:id])
+    if @card.update(card_params)
+      redirect_to @post
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @card = Card.find(params[:id])
+    @card.destroy
+    redirect_to root
   end
 
   private

@@ -1,6 +1,9 @@
 <%= render "shared/header" %>
   <div class ="plan-create-form"> 
     <%= form_with model: @task_list, local: true do |form| %>
+
+    <%= render 'shared/error_messages', model: form.object %>
+
       <div class ="title-form">
         <%= form.text_field :title, calss: "newplan-form" , placeholder: "Plan name" %>
       </div>

@@ -1,4 +1,5 @@
 class TaskListsController < ApplicationController
+
   def index
     @task_lists = TaskList.all
   end
@@ -21,14 +22,13 @@ class TaskListsController < ApplicationController
   end
 
   def update
-    task_list = TaskList.find(params[:id])
-    if task_list.update(task_list_params)
-      redirect_to root_path
+    @task_list = TaskList.find(params[:id])
+    if @task_list.update(task_list_params)
+    redirect_to root_path
     else
       render :edit
     end
   end
-
 
   def destroy
     task_list = TaskList.find(params[:id])
