@@ -38,12 +38,7 @@
 人生が終わるまでのカウントダウンや人生のタスクをゆるく管理することで、少し幸せに近づくことができる。
   
 # URL
-<<<<<<< Updated upstream
-準備中
-<!-- [https://sachi-plan.onrender.com](https://sachi-plan.onrender.com) -->
-=======
 [https://sachi-plan.onrender.com](https://sachi-plan.onrender.com)
->>>>>>> Stashed changes
   
 # テスト用アカウント
 - Basic認証ID：admin 
