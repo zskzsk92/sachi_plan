@@ -34,6 +34,11 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
       end
+      it 'birthdayが空では登録できない' do
+        @user.birthday = ''
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Birthday can't be blank")
+      end
       it 'nicknameが10文字以上では登録できない' do
         @user.nickname = 'aaaaaaaaaaa'
         @user.valid?

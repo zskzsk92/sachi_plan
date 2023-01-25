@@ -22,8 +22,25 @@
       <div class="container marketing">
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+            <h2 class="featurette-heading">
+              <p id="RealtimeClockArea">
+                  <div class="countdown-container">
+                    <div id="user_birthday" data-json="<%= current_user.birthday.to_json %>"></div>
+                    <h1>Time to go to heaven 👼</h1> 
+                    <h2> You have ...</h2>
+                    <div class="time-container">
+                      <p class="time"><span id="day"></span>days</p>
+                      <p class="time"><span id="hour"></span>hour</p>
+                      <p class="time"><span id="min"></span>min</p>
+                      <p class="time"><span id="sec"></span>sec</p>
+                    </div>
+                  </div>
+                <%# Oh yeah, it’s that good. 
+                <span class="text-muted">
+                  See for yourself.
+                </span> %>
+            </h2>
+            <%# <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p> %>
           </div>
           <div class="col-md-5 order-md-1">
             <%= image_tag 'main-image.png',width: '100%',height: '500px'  %>
@@ -35,9 +52,6 @@
       
       <%# <hr class="featurette-divider"> %>
      
-
-
-
       <div class ="lower-contents">
 
         <div class="mt-5"></div>
@@ -48,7 +62,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2-heart-fill" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5Zm-2 4v-1c0-.276.244-.5.545-.5h10.91c.3 0 .545.224.545.5v1c0 .276-.244.5-.546.5H2.545C2.245 5 2 4.776 2 4.5Zm6 3.493c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
               </svg>
-              <span class="fs-5"><%= " #{current_user.nickname}'s " %><%= image_tag 'logo_kuro_moji2.png' ,width: '120px',height: '120px' %></span>
+              <span class="fs-5"><%= "#{current_user.nickname}'s " %><%= image_tag 'logo_kuro_moji3.jpg' ,width: '130px',height: '25px' %></span>
               <%# <button class="btn btn-primary" type="button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2-plus-fill" viewBox="0 0 16 16">
                 <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 3.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5H2.545c-.3 0-.545.224-.545.5zm6.5 5a.5.5 0 0 0-1 0V10H6a.5.5 0 0 0 0 1h1.5v1.5a.5.5 0 0 0 1 0V11H10a.5.5 0 0 0 0-1H8.5V8.5z"/>
@@ -57,7 +71,7 @@
             </a>
             
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-              <%= link_to  new_task_list_path , class:"btn btn-primary" do%>
+              <%= link_to  new_task_list_path , class:"btn btn-outline-warning" do%>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2-plus-fill" viewBox="0 0 16 16">
                   <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 3.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5H2.545c-.3 0-.545.224-.545.5zm6.5 5a.5.5 0 0 0-1 0V10H6a.5.5 0 0 0 0 1h1.5v1.5a.5.5 0 0 0 1 0V11H10a.5.5 0 0 0 0-1H8.5V8.5z"/>
                 </svg> Plan
