@@ -6,6 +6,8 @@
 | nickname           | string | null: false|
 | email              | string | null: false|
 | encrypted_password | string | null: false|
+| birthday           | date   | null: false|
+
 ### Association
 - has_many :task_lists
 
@@ -67,14 +69,18 @@ SACHI!!Plan。
 [要件を定義したシート](https://docs.google.com/spreadsheets/d/1jJwdiKjbiA8lDfuf4WgLfFH82MoEYy_0r2OSVrFprAM/edit#gid=982722306)
   
 # 実装した機能についての画像やGIFおよびその説明
-準備中
+- カウントダウン機能
+[![Image from Gyazo](https://i.gyazo.com/4642ba1c39487db1ca3fb7a5dc3fdeab.gif)](https://gyazo.com/4642ba1c39487db1ca3fb7a5dc3fdeab)
+  
+- タスクリスト投稿機能
+[![Image from Gyazo](https://i.gyazo.com/fceed3a1c9f90cc59f79ea675cdf15d6.gif)](https://gyazo.com/fceed3a1c9f90cc59f79ea675cdf15d6)
   
 # 実装予定の機能
-現在はタスク管理機能を実装中。
-今後はカウントダウン機能やTwitter認証ログインを実装予定。
+現在はTwitter認証ログインを実装中
+今後はタスクリストをドラッグ＆ドロップで並び替えができる機能を実装予定。
   
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/7bcd11740af008d7b21365512b0f9d21.png)](https://gyazo.com/7bcd11740af008d7b21365512b0f9d21)
+[![Image from Gyazo](https://i.gyazo.com/8042b8a9dd351019970f2d7a33b66438.png)](https://gyazo.com/8042b8a9dd351019970f2d7a33b66438)
   
 
 # 画面遷移図

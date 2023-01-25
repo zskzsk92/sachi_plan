@@ -113,7 +113,25 @@
   }
 }
 
+/* --------------------------------------------------
+ カウントダウン機能
+-------------------------------------------------- */
+.time-container {
+  display: flex;
+}
 
+.time {
+  font-size: 1rem;
+  margin: .2rem;
+  background-color: lightgoldenrodyellow;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+#day,#hour,#min,#sec {
+  font-size: 3rem;
+  margin-right: 1rem;
+}
 
 /* --------------------------------------------------
  タスク管理機能
