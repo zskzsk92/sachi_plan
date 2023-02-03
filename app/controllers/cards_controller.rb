@@ -17,6 +17,7 @@ class CardsController < ApplicationController
 
   def show
     @card = Card.find(params[:id])
+    @task_list = TaskList.find(params[:task_list_id])
   end
 
   def edit
@@ -28,7 +29,7 @@ class CardsController < ApplicationController
     @task_list = TaskList.find(params[:task_list_id])
     @card = Card.find(params[:id])
     if @card.update(card_params)
-      redirect_to @post
+      redirect_to task_list_card_path(@task_list,@card)
     else
       render :edit
     end
@@ -37,7 +38,7 @@ class CardsController < ApplicationController
   def destroy
     @card = Card.find(params[:id])
     @card.destroy
-    redirect_to root
+    redirect_to root_path
   end
 
   private

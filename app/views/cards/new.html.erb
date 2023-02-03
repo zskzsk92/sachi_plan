@@ -1,4 +1,7 @@
 <%= render "shared/header" %>
+
+<div class="container">
+
   <div class ="card-create-form"> 
     <%= form_with model: [@task_list , @card] ,local: true do |form| %>
 
@@ -8,7 +11,7 @@
         <%= form.text_field :content, calss: "content-form" , placeholder: "何する？" %>
       </div>
       <div class ="memo-form">
-        <%= form.text_area :memo, calss: "memo-form" , placeholder: "memo" %>
+        <%= form.text_area :memo, calss: "memo-form" , placeholder: " memo" %>
       </div>
       <div class ="image-form">
         <label class="form-image">
@@ -21,3 +24,5 @@
       </div> 
     <% end %>
   </div>
+
+</div>
