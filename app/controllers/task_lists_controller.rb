@@ -1,7 +1,7 @@
 class TaskListsController < ApplicationController
 
   def index
-    @task_lists = TaskList.all
+    @task_lists = TaskList.where(user:current_user).order("created_at ASC").page(params[:page])
   end
 
   def new

@@ -1,31 +1,3 @@
-
-/* --------------------------------------------------
-自分作った初期の上部
--------------------------------------------------- */
-
-/* .upper-contents{
-  height: 500px; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* .main-image {
-  height: 400px;
-  width: auto;
-  margin: 20px;
-} */
-/* 
-.countdown-content{
-  height: 400px;
-  width: 600px;
-  margin: 20px;
-  padding: 40px;
-  border-radius: 25px;
-  font-size: 40px;
-  background-color:rgb(239, 236, 232);
-} */
-
 /* --------------------------------------------------
  upper-contents
 -------------------------------------------------- */
@@ -116,21 +88,26 @@
 /* --------------------------------------------------
  カウントダウン機能
 -------------------------------------------------- */
+
+.countdown-container{
+  /* background-color: aquamarine; */
+}
+
 .time-container {
   display: flex;
 }
 
 .time {
-  font-size: 1rem;
-  margin: .2rem;
+  font-size: 20px;
+  margin: 4px;
   background-color: lightgoldenrodyellow;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 15px;
 }
 
 #day,#hour,#min,#sec {
-  font-size: 3rem;
-  margin-right: 1rem;
+  font-size: 50px;
+  margin-right: 5px;
 }
 
 /* --------------------------------------------------
@@ -144,3 +121,18 @@
   text-decoration: none;
   color: black;
 }
+
+/* --------------------------------------------------
+ テスト
+-------------------------------------------------- */
+.container{
+  
+}
+/* --------------------------------------------------
+ ページネーション
+-------------------------------------------------- */
+.pagination {
+  justify-content: center;
+}
+
+
