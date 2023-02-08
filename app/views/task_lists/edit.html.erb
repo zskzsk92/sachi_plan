@@ -1,14 +1,26 @@
 <%= render "shared/header" %>
-  <div class ="plan-create-form"> 
-    <%= form_with model: @task_list, local: true do |form| %>
-    
-    <%= render 'shared/error_messages', model: form.object %>
 
-      <div class ="title-form">
-        <%= form.text_field :title, calss: "newplan-form" , placeholder: "Plan name" %>
-      </div>
-      <div class ="buttun">
-        <%= form.submit 'POST',class:"buttun"%>
-      </div> 
-    <% end %>
+<div class="container">
+  <div class="row">
+
+    <div class ="plan-create-form"> 
+      <%= form_with model: @task_list, local: true do |form| %>
+      
+      <%= render 'shared/error_messages', model: form.object %>
+
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"></label>
+          <%= form.text_field :title, calss: "form-control" ,style: "width:100%", rows:"3", placeholder: "Plan name" %>
+        </div>
+
+        <div class="d-grid gap-2">
+          <div class ="buttun">
+            <%= form.submit 'POST',class:"btn btn-secondary w-100"%>
+          </div> 
+        </div>
+
+      <% end %>
+    </div>
+
   </div>
+</div>
