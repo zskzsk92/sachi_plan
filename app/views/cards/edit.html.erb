@@ -1,23 +1,37 @@
 <%= render "shared/header" %>
-  <div class ="card-create-form"> 
-    <%= form_with model: [@task_list , @card] ,local: true do |form| %>
 
-     <%= render 'shared/error_messages', model: form.object %>
-     
-      <div class ="content-form">
-        <%= form.text_field :content, calss: "content-form" , placeholder: "何する？" %>
+<div class="container">
+  <div class="row">
+
+    <div class ="card-create-form"> 
+      <%= form_with model: [@task_list , @card] ,local: true do |form| %>
+      <%= render 'shared/error_messages', model: form.object %>
+      
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Plan</label><br>
+        <%= form.text_field :content, calss: "form-control" ,style: "width:100%", rows:"3", placeholder: "Planを入力してください" %>
+        <%# <input type="content" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"> %>
       </div>
-      <div class ="memo-form">
-        <%= form.text_area :memo, calss: "memo-form" , placeholder: "memo" %>
+
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Memo</label><br>
+        <%= form.text_area :memo, calss: "form-control" ,style: "width:100%" , rows:"3" , placeholder: " Memo" %>
+        <%# <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> %>
       </div>
-      <div class ="image-form">
-        <label class="form-image">
-          <span class="image-file">image</span>
-          <%= form.file_field :image, class: 'hidden' %>
-        </label>
+
+      <div class="mb-3">
+        <label for="formFile" class="form-label">Image</label>
+        <%= form.file_field :image, class: 'form-control' %><br>
       </div>
-      <div class ="buttun">
-        <%= form.submit 'POST',class:"buttun"%>
-      </div> 
-    <% end %>
+      
+      <div class="d-grid gap-2">
+        <div class ="buttun">
+          <%= form.submit 'POST',class:"btn btn-secondary w-100"%>
+        </div> 
+      </div>
+
+      <% end %>
+    </div>
+
   </div>
+</div>
