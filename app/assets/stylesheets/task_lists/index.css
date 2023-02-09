@@ -88,11 +88,7 @@
 /* --------------------------------------------------
  カウントダウン機能
 -------------------------------------------------- */
-
-.countdown-container{
-  /* background-color: aquamarine; */
-}
-
+/* PC画面　（画面サイズが768px以上のとき） */
 .time-container {
   display: flex;
 }
@@ -102,13 +98,54 @@
   margin: 4px;
   background-color: lightgoldenrodyellow;
   border-radius: 1rem;
-  padding: 15px;
+  padding: 12px;
 }
 
 #day,#hour,#min,#sec {
-  font-size: 50px;
+  font-size: 45px;
   margin-right: 5px;
 }
+
+/* タブレット画面　（画面サイズが768〜1199pxの時） */
+@media (min-width:768px) and (max-width:1200px){
+  .time {
+    font-size: 13px;
+    margin: 4px;
+    background-color: lightgoldenrodyellow;
+    border-radius: 1rem;
+    padding: 10px;
+  }
+  
+  #day,#hour,#min,#sec {
+    font-size: 25px;
+    margin-right: 5px;
+  }
+
+  image{
+    width: 50%;
+  }
+}
+
+/* スマホ画面　（画面サイズが768px以下のとき） */
+@media (max-width: 767px){
+  .time {
+    font-size: 10px;
+    margin: 4px;
+    background-color: lightgoldenrodyellow;
+    border-radius: 1rem;
+    padding: 12px;
+  }
+  
+  #day,#hour,#min,#sec {
+    font-size: 20px;
+    margin-right: 5px;
+  }
+
+  image{
+    width: 50%;
+  }
+}
+
 
 /* --------------------------------------------------
  タスク管理機能
@@ -117,22 +154,16 @@
   margin-top: 5 !important;
 }
 
+
 .icon-link{
   text-decoration: none;
   color: black;
 }
 
 /* --------------------------------------------------
- テスト
--------------------------------------------------- */
-.container{
-  
-}
-/* --------------------------------------------------
  ページネーション
 -------------------------------------------------- */
 .pagination {
   justify-content: center;
 }
-
 
